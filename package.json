@@ -1,0 +1,32 @@
+
+{
+  "name": "work-request-from",
+  "version": "1.0",
+  "description": "A simpel form tyo submit jira requests",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "4.15.2",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swshetty/workrequestform"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
