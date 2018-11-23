@@ -1,32 +1,23 @@
 {
-  "name": "work-request-from",
-  "version": "1.0",
-  "description": "A simpel form tyo submit jira requests",
-  "engines": {
-    "node": "6.11.1"
-  },
+  "name": "work-request-form",
+  "version": "1.0.0",
+  "description": "an express js app to be used for creating jira request from an external form",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.4",
-    "package.json": "^2.0.1",
-    "request": "^2.81.0"
-  },
-  "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/swshetty/workrequestform"
+    "url": "git+https://github.com/swshetty/workrequestform.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+  "author": "Swastik Shetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swshetty/workrequestform/issues"
+  },
+  "homepage": "https://github.com/swshetty/workrequestform#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
 }
