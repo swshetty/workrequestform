@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}))
 
-
+app.use(express.static('public'));
 
 // index
 app.get('/', function (req, res) {
