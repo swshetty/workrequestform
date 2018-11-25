@@ -1,0 +1,26 @@
+{
+ "name": "Create New Request Form",
+ "description": "Atlassian Connect app",
+ "key": "com.vodafoneidea.createrequestapp",
+ "baseUrl": "https://createjirarequest.herokuapp.com",
+ "vendor": {
+     "name": "Deloitte",
+     "url": "http://deloitte.com"
+ },
+ "authentication": {
+     "type": "none"
+ },
+ "apiVersion": 1,
+ "modules": {
+     "generalPages": [
+         {
+             "url": "/createrequest.html",
+             "key": "create-request",
+             "location": "system.top.navigation.bar",
+             "name": {
+                 "value": "Greeting"
+             }
+         }
+     ]
+ }
+}
