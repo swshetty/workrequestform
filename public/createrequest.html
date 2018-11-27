@@ -3,62 +3,74 @@
 	
 	<head>
 		<title>Create Request Form</title>
-		<link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">
-        <!-- <script src="https://swshetty.atlassian.net/atlassian-connect/all.js"></script> -->
+		<style type="text/css">
+			.bodyClass{
+				width: 60%;
+				margin: auto;
+				text-align: center;
+			}
 
-        <script src="https://connect-cdn.atl-paas.net/all.js" async></script>
+			#myCustomTrigger {
+				color: white;
+	            border-radius: 4px;
+	            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            	background: rgb(28, 184, 65); /* this is a green */
+            	font-size: 24px;
+    			padding: 15px;
+        	}
 
-		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-		
-		<script type="text/javascript">
+        	#myCustomTrigger: hover{
+        		background: rgb(0, 100, 0);
+        	}
+
+        	.button {
+			    background-color: #4CAF50; /* Green */
+			    border: none;
+			    color: white;
+			    padding: 16px 32px;
+			    text-align: center;
+			    text-decoration: none;
+			    display: inline-block;
+			    font-size: 16px;
+			    margin: 4px 2px;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			    cursor: pointer;
+			    background-color: white; 
+			    color: black; 
+			    border: 2px solid #4CAF50;
+			}
+
 			
-			$(document).ready(function(){
-				$("#myButton").click(function(){
-					alert("Button clicked");
+			.button:hover {
+			    background-color: #4CAF50;
+			    color: white;
+			}
 
-					$.ajax({
-						method: "POST",
-						url: "https://swshetty.atlassian.net/rest/api/latest/issue",
-						dataType: "JSON",
-						headers:{
-							"Content-Type": "application/json",
-							"Authorization": "Basic " + btoa("swshetty@deloitte.com:7sn7N6zTAWSyQNv7ahCw86D7"),
-						},
-						data: {
-							"fields": {
-							   "project":
-							   { 
-							      "key": "TEST"
-							   },
-							   "summary": "REST EXAMPLE",
-							   "description": "Creating an issue via REST API",
-							   "issuetype": {
-							      "name": "Task"
-							   }
-							}
-						}
-					})
-					.done(function( respData ) {
-						alert( "Data Saved: " + respData );
-					})
-					.fail(function() {
-						alert( "error" );
-					});
-
-				});
-			});
-
-		</script>
+		</style>
 	</head>
 	
 	<body>
 		
 
-		<div class="ac-content">
-	    	<h1>Create Request Form</h1>
-		    <button id='myButton'>Submit</button>
-
+		<div class="bodyClass">
+	    	<h1>Welcome! Vodafone-Idea studio to the rescue!</h1>
+	    	<h2>Please click the button below to submit your requets for a new work item, defect or anything else.</h2>
+		    <button id='myCustomTrigger' class="button">Submit New Request</button>
 		</div>
+
+		<script type="text/javascript" src="https://swshetty.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/md6f5v/b/27/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=cabf26dd"></script>
+
+	    <script type="text/javascript">
+	    	window.ATL_JQ_PAGE_PROPS =  {
+				"triggerFunction": function(showCollectorDialog) {
+				//Requires that jQuery is available! 
+				jQuery("#myCustomTrigger").click(function(e) {
+					e.preventDefault();
+					showCollectorDialog();
+				});
+			}};
+		</script>
 
 	</body>
 </html>
