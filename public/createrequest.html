@@ -4,47 +4,109 @@
 	<head>
 		<title>Create Request Form</title>
 		<style type="text/css">
-			.bodyClass{
-				width: 60%;
-				margin: auto;
-				text-align: center;
+			.mainContainer{
+				margin: 125px auto;
+    			width: 60%;
+    			position: relative;
+				
 			}
 
-			#myCustomTrigger {
-				color: white;
-	            border-radius: 4px;
-	            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-            	background: rgb(28, 184, 65); /* this is a green */
-            	font-size: 24px;
-    			padding: 15px;
+			.header1, .header2, .body_copy{
+				font-family: helvetica;
+				color: #4F4F4F;
+			}
+
+			.header1{
+				font-weight: bold;
+				font-size: 45px;
+				margin-bottom: 0px;
+				margin-top: 15px;
+
+			}
+
+			.header2{
+				font-size: 30px;
+			    font-weight: normal;
+			    margin-top: 5px;
+			} 
+
+			.body_copy{
+				font-size: 25px;
+			    width: 385px;
+			    margin-top: 45px;
+			    margin-bottom: 45px;
+			}
+
+			.inline-block{
+				display: inline-block;
+				float: left;
         	}
 
-        	#myCustomTrigger: hover{
-        		background: rgb(0, 100, 0);
+        	#button: hover{
+        		background-color: #D32F1D;
         	}
 
         	.button {
-			    background-color: #4CAF50; /* Green */
+        		font-weight: bold;
+        		font-size: 25px;
+        		cursor: pointer;
+        		color: white;
+
+        		border-radius: 4px;
+			    background-color: #D32F1D; 
 			    border: none;
-			    color: white;
-			    padding: 16px 32px;
+			    
+			   
 			    text-align: center;
 			    text-decoration: none;
 			    display: inline-block;
-			    font-size: 16px;
-			    margin: 4px 2px;
-			    -webkit-transition-duration: 0.4s; /* Safari */
+			    
+			   
+			    -webkit-transition-duration: 0.2s; /* Safari */
 			    transition-duration: 0.4s;
-			    cursor: pointer;
-			    background-color: white; 
-			    color: black; 
-			    border: 2px solid #4CAF50;
+			    padding: 20px;
+			    
+			    
 			}
 
 			
 			.button:hover {
-			    background-color: #4CAF50;
+			    background-color: #A62618;
 			    color: white;
+			}
+
+			.people_img{
+				height: 350px;
+				width: 490px;
+				position:absolute;
+				bottom: -40px;
+				right: 0px;
+			}
+
+			@media only screen and (max-width: 1200px) {
+
+				.mainContainer{
+					margin: 15px;
+					width: 100%;
+				}
+
+			    .people_img {
+			        position: static;
+				    display: block;
+				    max-width: 280px;
+				    max-height: 250px;
+				    margin-top: 30px;
+			    }
+
+			    .header2{
+			    	margin-right: 25px;
+			    }
+
+
+			    .body_copy{
+			    	width: auto;
+			    	margin-right: 25px;
+			    }
 			}
 
 		</style>
@@ -53,10 +115,20 @@
 	<body>
 		
 
-		<div class="bodyClass">
-	    	<h1>Welcome! Vodafone-Idea studio to the rescue!</h1>
-	    	<h2>Please click the button below to submit your requets for a new work item, defect or anything else.</h2>
-		    <button id='myCustomTrigger' class="button">Submit New Request</button>
+		<div class="mainContainer">
+			
+				<img src="images/voda-logo.png" alt="Vodafone Logo" height="45px" width="45px">
+				<img src="images/idea-logo.png" alt="Vodafone Logo" height="51px" width="78px" style="margin-left: 15px;">
+			
+			
+			
+		    	<h1 class='header1'>Welcome!</h1>
+		    	<h2 class='header2'>Vodafone-Idea studio to the rescue!</h2>
+		    	<p class='body_copy'>Please click the button below to submit your requets for a new work item, defect or anything else.</p>
+			    <button id='myCustomTrigger' class="button">Submit New Request</button>
+
+				<img class='people_img' src="images/people.png" alt="Vodafone Logo">			    
+		    
 		</div>
 
 		<script type="text/javascript" src="https://swshetty.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/md6f5v/b/27/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=cabf26dd"></script>
