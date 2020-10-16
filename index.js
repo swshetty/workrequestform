@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 // index
 app.get('/', function (req, res) {
-  res.send('hello world i am create request form')
+  res.send('Hello World! I am creating request form')
 })
 
 
